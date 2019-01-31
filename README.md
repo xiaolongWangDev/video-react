@@ -1,3 +1,5 @@
+## I forked this repo from https://github.com/video-react/video-react.
+added props: preHandleFullScreenChange, and postHandleFullScreenChange on Player component to allow rigistering additional behaviors when Player enter/exit the fullscreen state.
 
 # video-react
 [![npm version](https://badge.fury.io/js/video-react.svg)](https://badge.fury.io/js/video-react) [![Build Status](https://travis-ci.org/video-react/video-react.svg?branch=master)](https://travis-ci.org/video-react/video-react) [![Package Quality](http://npm.packagequality.com/shield/video-react.svg)](http://packagequality.com/#?package=video-react)

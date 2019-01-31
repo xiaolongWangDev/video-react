@@ -41,6 +41,8 @@ const propTypes = {
   poster: PropTypes.string,
   preload: PropTypes.oneOf(['auto', 'metadata', 'none']),
 
+  preHandleFullScreenChange: PropTypes.func,
+  postHandleFullScreenChange: PropTypes.func,
   onLoadStart: PropTypes.func,
   onWaiting: PropTypes.func,
   onCanPlay: PropTypes.func,
@@ -339,7 +341,9 @@ export default class Player extends Component {
   }
 
   handleFullScreenChange() {
+    if(this.props.preHandleFullScreenChange) this.props.preHandleFullScreenChange(this);
     this.actions.handleFullscreenChange(fullscreen.isFullscreen);
+    if(this.props.postHandleFullScreenChange) this.props.postHandleFullScreenChange(this);
   }
 
   handleMouseDown() {
